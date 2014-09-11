@@ -1,0 +1,52 @@
+#include <iostream>
+
+int main()
+{
+	int i;
+	 // a declaraction of i
+	&i;
+	 // this would return the ADDRESS of "i"
+
+	int *p;
+	// this creates a space in memory for the integer
+
+	p = &i;
+	//this puts the address of i into P
+
+	cout<<*p<<endl;
+	//*p is the dereferencing operator
+
+	/*This is Dynamic Memory Allocation*/
+	int *p = new int(5);
+
+	//*p contains the address for this new integer 
+	float *px = new float(3.3);
+
+	delete p;
+	//removes p from memory
+	delete px;
+	//removes px from memory	
+	return 0;
+}
+
+void dealingWithPointers()
+{
+	float *px = new float[3];
+	px[0] = 1.1;
+	px[1] = 3.2;
+	px[2] = 0.0;	
+
+	float *py = px;
+	//py contains the REFERENCE to what px is pointing to
+}
+
+
+/*
+Be sure to put in deletes if you're allocating memory!
+*/
+
+/*
+Things to review
+- Pointers, Declaraction, and Instantiation
+- Determine the difference between using new and other methods of declaration. 
+*/

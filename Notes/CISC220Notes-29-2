@@ -1,0 +1,31 @@
+int main()
+{
+	int j = 5;
+	foo(j);
+}
+
+//"call by value", does NOT mutate what's passed in 
+void foo1(int i)
+{
+	i = i + 3;
+}
+
+//"call by reference", DOES mutate what's passed in 
+void foo2(int &i)
+{
+	i = i + 3;
+}
+
+//"call by pointer"
+//passing in the address of what is being passed in, needs to have "&" passed along with it
+void foo3(int *p)
+{
+	*p = *p + 3;	
+}
+
+/*
+	After sum1, z = 8
+	After sum2, z = 8
+	After sum3, z =	30
+	After sum4, error?
+*/

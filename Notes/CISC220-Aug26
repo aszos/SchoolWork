@@ -1,0 +1,15 @@
+CISC 220 Introduction Notes
+
+Pillars of CISC220
+1. Defining * in the abstract
+2. Implementing * in C++  
+3. Analyzing the performance of * in terms of time and space
+4. Applying * to real-world problems 
+(* = data types and algorithms)
+
+
+Error checking in C++
+- Uninitialized local variables
+- Increase security and efficiency
+- No array bounds checking
+- Dereferencing null pointers

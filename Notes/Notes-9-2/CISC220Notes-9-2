@@ -1,0 +1,23 @@
+/*
+Null Terminated Strings
+- Just a character array
+*/
+
+
+int main()
+{
+	char *A = new char[10];
+	A[0] = 't';
+	// and other letters
+	A[1] = '\0';
+	//null terminated
+
+	//Consider the following code: char *s = "cat"; returns the size in bytes of the variable passed to it..
+	/*
+	1. What would be the output of couting sizeof(s), if s = "cat"?
+	Answer: 8 bytes are allocated for an address, sizeof(s) prints how big is an address?
+	
+	2. What would be the output of couting sizeof(*s), if s = "cat"?
+	Answer: *s points to the first character of the character sequence. *s = s[0].
+	*/
+}
