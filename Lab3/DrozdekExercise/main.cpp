@@ -33,20 +33,10 @@ int main(int argc, char **argv)
 	{
 		inStream >> c;
 		cout << c << endl;			
+		
 		/*
-			if(c == "( || c == "[" || c == "{")
-				push(c);
-			else if(c == ")" || c == "]" || c == "}")	
-				//if(c != popped off delimited)
-					//exit(1);
-			else if(c=="/")
-				//read the next character
-				if(c == "*")
-				//skip all characters until */ is found, if not found report error
-				else(c == */)
-					continue;				
-		*/	
-
+		Structure algorith for delimiter checker
+		*/
 	}
 	inStream.close();
 	return 0;
