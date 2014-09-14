@@ -37,30 +37,47 @@ int main(int argc, char **argv)
 		
 		if(isCommented)
 		{
-	
+			if(c == '*' && inStream.peek() == '/') 
+			{
+				isCommented = false;
+				cout << "Popped " << delimiters.top() << endl;
+				delimiters.pop();
+			}
 		}
 		else
 		{
-			if(c == '/')
+			if(c == '/' && inStream.peek() == '*')
 			{
-				isCommented = (inStream.peek() == '*');	
+				isCommented = true;
+				delimiters.push(c);	
+				cout << "Pushed " << c << endl;	
+				inStream >> c;
+			}
+			else if(c == '*' && inStream.peek() == '/')
+			{
+				cout << "Unmatched comment." << endl;
+				exit(1);
 			}
 			else if(c == '(' ||  c == '[' ||  c == '{')
 			{
 				delimiters.push(c);	
+				cout << "Pushed " << c << endl;
 			}
 			else if(c == ')' || c == ']' || c == '}')
 			{
 				if(c == ')' && delimiters.top() == '(')
 				{
+					cout << "Popped " << delimiters.top() << endl;
 					delimiters.pop();	
 				}
 				else if(c == ']' && delimiters.top() == '[')
 				{
+					cout << "Popped " << delimiters.top() << endl;
 					delimiters.pop();	
 				}
 				else if(c == '}' && delimiters.top() == '{')
 				{
+					cout << "Popped " << delimiters.top() << endl;
 					delimiters.pop();	
 				}
 				else
@@ -75,9 +92,8 @@ int main(int argc, char **argv)
 	inStream.close();
 	
 	if(delimiters.size() != 0)
-		cout << "There are unmatched delimiters." << endl;
+		cout << "Unmatched delimiter detected." << endl;
 	else
 		cout << "No unmatched delimiters found, captain." << endl;
-
 	return 0;
 }
