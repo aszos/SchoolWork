@@ -4,7 +4,6 @@ Modify this class to be circular (Meaning that the areay queue has no end)
 
 */
 
-//----------------------------------------------------------------------------
 
 #include "array_queue.hh"
 
@@ -37,7 +36,6 @@ void char_test()
   }
 
   cout << "Written forward that is:\n";
-
   while (!s.empty()) {
     cout << s.dequeue();
 
@@ -87,6 +85,7 @@ void string_test()
   while (!s.empty()) {
     cout << s.dequeue() << " ";
 
+
     // this adds a delay between words
 
 #ifdef LINUX
@@ -97,7 +96,6 @@ void string_test()
   cout << "\n";
 }
 
-//----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 
 int main(int argc, char** argv)
