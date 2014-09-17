@@ -1,19 +1,11 @@
 //----------------------------------------------------------------------------
-/*
-Modify this class to be circular (Meaning that the areay queue has no end)
-
-*/
-
-
+//----------------------------------------------------------------------------
 #include "array_queue.hh"
-
 #define LINUX 
-
 #ifdef LINUX
 #include <unistd.h>
 #endif
 
-//----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 
 void char_test()
@@ -24,29 +16,35 @@ void char_test()
 
   cout << "Enter some text\n";
 
-  // reads from terminal character by character until newline reached
-
   cin.get(next);
   while (next != '\n') {
-
-    // put last character read into queue
-
     s.enqueue(next);
     cin.get(next);
   }
 
   cout << "Written forward that is:\n";
+  s.size();
   while (!s.empty()) {
     cout << s.dequeue();
+  }
+  
+  cout << "\n";
+  s.size();
 
-    // this adds a delay between chars
-
-#ifdef LINUX
-    cout.flush();
-    usleep(100000);
-#endif
+  cout << "Enter some text\n";
+  cin.get(next);
+  while (next != '\n') {
+    s.enqueue(next);
+    cin.get(next);
   }
 
+  cout << "Written forward that is:\n";
+  s.size();
+  while (!s.empty()) {
+    cout << s.dequeue();
+  }
+
+  s.size();
   cout << "\n";
 }
 
@@ -81,7 +79,7 @@ void string_test()
   }
 
   cout << "Written forward that is:\n";
-  
+  s.size();
   while (!s.empty()) {
     cout << s.dequeue() << " ";
 
@@ -93,6 +91,8 @@ void string_test()
     usleep(250000);
 #endif
   }
+
+  s.size();
   cout << "\n";
 }
 

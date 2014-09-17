@@ -42,5 +42,3 @@ $(EXECNAME): 	$(OBJECTS)
 
 clean:
 	rm -rf *~ *.o $(EXECNAME) 
-
-

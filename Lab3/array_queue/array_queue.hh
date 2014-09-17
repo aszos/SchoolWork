@@ -12,7 +12,7 @@ using namespace std;
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 
-const int MAX_QUEUE_SIZE = 100;
+const int MAX_QUEUE_SIZE = 10;
 
 template<typename T>
 class MyQueue
@@ -71,10 +71,14 @@ void MyQueue<T>::enqueue(T theData)
 	if(!full())
 	{
 		A[back] = theData;
-		if(back == MAX_QUEUE_SIZE - 1)
+		if(back == MAX_QUEUE_SIZE)
 			back = 0;
 		else
 			back++;
+	}
+	else
+	{
+		error("WARNING: The queue has reached maximum capacity.");
 	}
 }
 
@@ -84,7 +88,10 @@ template<typename T>
 T MyQueue<T>::dequeue()
 {
 	T storedValue = A[front];
-	front++;
+		if(front == MAX_QUEUE_SIZE)
+			front = 0;
+		else
+			front++;
 	return storedValue;
 }
 
@@ -93,7 +100,9 @@ T MyQueue<T>::dequeue()
 template<typename T>
 int MyQueue<T>::size() 
 {
-	return back - front + 1; 
+	cout << endl << "FRONT: " << front ;
+	cout << endl << "BACK: " << back << endl;
+	//return (back - front); 
 }  
 
 //----------------------------------------------------------------------------
@@ -106,6 +115,6 @@ void MyQueue<T>::error(string s)
 }
 
 //----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
+//---------------------------------------------------------------------------
 
 #endif
