@@ -151,7 +151,19 @@ void MyList<T>::insert_ordered(T & theData)
 template<typename T>
 void MyList<T>::push_front(T & theData)
 {
-  // ???
+  Node<T> *temp = new Node<T>(theData, NULL, first);
+
+  // is there something in the list currently?
+
+  if (first)
+    first->setPrev(temp);
+
+  // if not, this item is also the new first
+
+  else
+    last = temp;
+
+  first = temp;
 
   curnum++;
 }
@@ -216,8 +228,12 @@ void MyList<T>::pop_back()
     exit(1);
   }
 
-  // ???
-
+  Node<T> *temp = last->getPrev();
+  delete last;
+  last = temp;
+  if(last)
+    last->setNext(NULL);
+ 
   // done
 
   curnum--;
