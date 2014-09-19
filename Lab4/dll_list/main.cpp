@@ -103,8 +103,8 @@ void reverse_char_test()
   cout << "Written backwards that is:\n";
 
   while (!L.empty()) {
-    cout << L.front();
-    L.pop_front();
+    cout << L.back();
+    L.pop_back();
   }
 
   cout << "\n";
@@ -127,7 +127,7 @@ void reverse_string_test()
 
     // put it into the list
 
-    L.push_back(next);
+    L.push_front(next);
 
     // was that the last word on the line?
 
