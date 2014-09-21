@@ -4,7 +4,6 @@
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
 #include "dll_list.hh"
 #include <cstdlib>
 #include <fstream>
@@ -127,7 +126,7 @@ void reverse_string_test()
 
     // put it into the list
 
-    L.push_front(next);
+    L.push_back(next);
 
     // was that the last word on the line?
 
@@ -143,8 +142,8 @@ void reverse_string_test()
   cout << "Written backwards that is:\n";
   
   while (!L.empty()) {
-    cout << L.front() << " ";
-    L.pop_front();
+    cout << L.back() << " ";
+    L.pop_back();
   }
   cout << "\n";
 }
@@ -165,13 +164,16 @@ void insert_ordered(char** argv)
 		exit(1);
 	}
 	
-	cout << "The file written from first from last:" << endl;
+	cout << "The file given in alphabetical order:" << endl;
 	
 	while(!inStream.eof())
 	{
 		inStream >> s;
-    		L.push_back(s);
+    		L.insert_ordered(s);
+		cout << "FRONT: " << L.front()  << endl;
+		cout << "BACK: " << L.back()  << endl;
 	}
+	cout << endl << L.size() << endl;
 
 	while(!L.empty())
 	{	

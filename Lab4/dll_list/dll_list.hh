@@ -139,9 +139,51 @@ const T & MyList<T>::back()
 template<typename T>
 void MyList<T>::insert_ordered(T & theData)
 {
-  // ???
-
-  curnum++;
+  if(empty())
+  {
+    Node<T> *temp = new Node<T>(theData, NULL, NULL);
+    first = last = temp; 
+    curnum++;
+  }
+  else if(theData.length() >= back().length())
+  {
+    Node<T> *temp = new Node<T>(theData, last, NULL); 
+    temp->getPrev()->setNext(temp);
+    last = temp;
+    curnum++;
+  }
+  else if(theData.length() < front().length())
+  {
+    Node<T> *temp = new Node<T>(theData, NULL, first); 
+    temp->getNext()->setPrev(temp); 
+    first = temp;
+    curnum++;
+  }
+  //else
+/*
+Redo this else. I feel that the reason why we're seg faulting is because the counter is greater than
+how many nodes are on the list.
+  {
+    //create a searching pointer 
+    Node<T> *currentNode = first;
+ 
+    //search for the appropriate spot, before the last element 
+    while( currentNode != NULL)
+    {
+        //if we find where it belongs
+	if(theData < currentNode->getData())
+	{
+          //create a new node, put it in the list, and set the pointers straight
+          Node<T> *temp = new Node<T>(theData, currentNode->getPrev(), currentNode->getNext()); 
+          currentNode->getPrev()->setNext(temp);
+          currentNode->getNext()->setPrev(temp);
+        }
+       //otherwise, move down the list
+       currentNode = currentNode->getNext(); 
+    }
+  }
+*/
+    //curnum++;
 }
 
 //----------------------------------------------------------------------------
