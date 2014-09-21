@@ -166,14 +166,13 @@ void insert_ordered(char** argv)
 	
 	cout << "The file given in alphabetical order:" << endl;
 	
-	while(!inStream.eof())
+	while(true)
 	{
 		inStream >> s;
+		if(inStream.eof())
+			break;
     		L.insert_ordered(s);
-		cout << "FRONT: " << L.front()  << endl;
-		cout << "BACK: " << L.back()  << endl;
 	}
-	cout << endl << L.size() << endl;
 
 	while(!L.empty())
 	{	
