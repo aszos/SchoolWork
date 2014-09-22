@@ -103,7 +103,6 @@ int MyList<T>::size()
 }
 
 //----------------------------------------------------------------------------
-
 // return element at FRONT of list without removing it
 
 template<typename T>
@@ -118,7 +117,6 @@ const T & MyList<T>::front()
 }
 
 //----------------------------------------------------------------------------
-
 // return element at BACK of list without removing it
 
 template<typename T>
@@ -133,7 +131,6 @@ const T & MyList<T>::back()
 }
 
 //----------------------------------------------------------------------------
-
 // item is put in the correct place in list assuming it is ordered from smallest to largest by T
 
 template<typename T>
@@ -160,79 +157,70 @@ void MyList<T>::insert_ordered(T & theData)
   {
     //create a searching pointer 
     Node<T> *currentNode = first->getNext();
- 
+
     //search for the appropriate spot 
     while(currentNode != NULL)
     {
-        //if we find where it belongs
-	if(theData <= currentNode->getData())
-	{
-          //create a new node, put it in the list, and set the pointers straight
-          Node<T> *temp = new Node<T>(theData, currentNode->getPrev(), currentNode); 
-          temp->getPrev()->setNext(temp);
-          temp->getNext()->setPrev(temp);
-          break;
-        }
-        else 
-        { 
-          //otherwise, move down the list
-          currentNode = currentNode->getNext(); 
-        }
+      //if we find where it belongs
+      if(theData <= currentNode->getData())
+      {
+        //create a new node, put it in the list, and set the pointers straight
+        Node<T> *temp = new Node<T>(theData, currentNode->getPrev(), currentNode); 
+        temp->getPrev()->setNext(temp);
+        temp->getNext()->setPrev(temp);
+        break;
+      }
+      else 
+      { 
+        //otherwise, move down the list
+        currentNode = currentNode->getNext(); 
+      }
     }
   }
   curnum++;
 }
 
 //----------------------------------------------------------------------------
-
 // item is new FRONT of list  
 
 template<typename T>
 void MyList<T>::push_front(T & theData)
 {
   Node<T> *temp = new Node<T>(theData, NULL, first);
-
   // is there something in the list currently?
 
   if (first)
     first->setPrev(temp);
-
   // if not, this item is also the new first
 
   else
     last = temp;
 
   first = temp;
-
   curnum++;
 }
 
 //----------------------------------------------------------------------------
-
 // item is new BACK of list  
 
 template<typename T>
 void MyList<T>::push_back(T & theData)
 {
   Node<T> *temp = new Node<T>(theData, last, NULL);
-
   // is there something in the list currently?
 
   if (last)
     last->setNext(temp);
-
   // if not, this item is also the new first
 
   else
     first = temp;
 
   last = temp;
-
   curnum++;
 }
 
 //----------------------------------------------------------------------------
-
 // remove item currently at FRONT of list
 
 template<typename T>
@@ -249,14 +237,10 @@ void MyList<T>::pop_front()
   if (first)                          // new first should have no prev
     first->setPrev(NULL);
 
-  // done
-
   curnum--;
-
 }
 
 //----------------------------------------------------------------------------
-
 // remove item currently at BACK of list
 
 template<typename T>
@@ -273,13 +257,10 @@ void MyList<T>::pop_back()
   if(last)
     last->setNext(NULL);
  
-  // done
-
   curnum--;
 
 }
 
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
-
 #endif

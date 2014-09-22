@@ -1,9 +1,5 @@
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
 #include "dll_list.hh"
 #include <cstdlib>
 #include <fstream>
@@ -13,18 +9,14 @@
 void char_test()
 {
   char next;
-
   MyList<char> L;
-
   cout << "Enter some text\n";
 
   // reads from terminal character by character until newline reached
 
   cin.get(next);
   while (next != '\n') {
-
     // put last character read into list
-
     L.push_back(next);
     cin.get(next);
   }
@@ -45,28 +37,21 @@ void string_test()
 {
   string next;
   char c;
-
   MyList<string> L;
 
   cout << "Enter a sentence or two\n";
 
   // read a word
-
   while (cin >> next) {
-
     // put it into the list
-
     L.push_back(next);
-
     // was that the last word on the line?
-
     c = cin.get();
 
     if (c == '\n')
       break;
     else
       cin.putback(c);
-
   }
 
   cout << "Written forward that is:\n";
@@ -89,12 +74,9 @@ void reverse_char_test()
   cout << "Enter some text\n";
 
   // reads from terminal character by character until newline reached
-
   cin.get(next);
   while (next != '\n') {
-
     // put last character read into list
-
     L.push_back(next);
     cin.get(next);
   }
@@ -115,21 +97,15 @@ void reverse_string_test()
 {
   string next;
   char c;
-
   MyList<string> L;
 
   cout << "Enter a sentence or two\n";
 
   // read a word
-
   while (cin >> next) {
-
     // put it into the list
-
     L.push_back(next);
-
     // was that the last word on the line?
-
     c = cin.get();
 
     if (c == '\n')
@@ -152,36 +128,37 @@ void reverse_string_test()
 
 void insert_ordered(char** argv)
 {
-	ifstream inStream;
-	string s;
-  	MyList<string> L;
-	
-	inStream.open(argv[1]);
-	
-	if(inStream.fail())
-	{
-		cout << "Failed to open file." << endl;
-		exit(1);
-	}
-	
-	cout << "The file given in alphabetical order:" << endl;
-	
-	while(true)
-	{
-		inStream >> s;
-		if(inStream.eof())
-			break;
-    		L.insert_ordered(s);
-	}
+  ifstream inStream;
+  string s;
+    MyList<string> L;
+  
+  inStream.open(argv[1]);
+  
+  if(inStream.fail())
+  {
+    cout << "Failed to open file." << endl;
+    exit(1);
+  }
+  
+  cout << "The file given in alphabetical order:" << endl;
+  
+  while(true)
+  {
+    inStream >> s;
+    if(inStream.eof())
+      break;
+    
+    L.insert_ordered(s);
+  }
 
-	while(!L.empty())
-	{	
-		cout << L.front()  << " ";
-		L.pop_front();
-	}
-	
-	cout << endl;
-	inStream.close();
+  while(!L.empty())
+  {  
+    cout << L.front()  << " ";
+    L.pop_front();
+  }
+  
+  cout << endl;
+  inStream.close();
 }
 
 //----------------------------------------------------------------------------
@@ -189,20 +166,20 @@ void insert_ordered(char** argv)
 
 int main(int argc, char** argv)
 {
-	//  char_test();
-	//  string_test();
+  //  char_test();
+  //  string_test();
 
-	if(argc < 2)
-	{
-		cout << "Please specify filename on command line" << endl;
-		exit(1);
-	}
+  if(argc < 2)
+  {
+    cout << "Please specify filename on command line" << endl;
+    exit(1);
+  }
 
-	insert_ordered(argv);
-	reverse_char_test();
-	reverse_string_test();
+  insert_ordered(argv);
+  reverse_char_test();
+  reverse_string_test();
 
-	return 1;
+  return 1;
 }
 
 //----------------------------------------------------------------------------
