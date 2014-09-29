@@ -38,6 +38,7 @@ public:
   void setRight(BSTNode<T> * theRight) { right = theRight; }
 
   void incrementNumber() { number++; }
+  int getNumber() { return number; }
   void print() { cout << key << " (" << number << ")" << endl; }
 
 private:
@@ -177,11 +178,37 @@ void print_inorder(BSTNode<T> *t)
 	print_inorder(t->getLeft());	
 	cout << t->getKey() << ", ";
 	print_inorder(t->getRight());	
-} 
+}
+
+template<typename T>
+int count_inorder(BSTNode<T> *t)
+{
+	if(!t)
+		return 0;
+	
+	return count_inorder(t->getLeft()) + t->getNumber()  + count_inorder(t->getRight());
+}
+
+template<typename T>
+int count_unique_inorder(BSTNode<T> *t)
+{
+	if(!t)
+		return 0;
+
+	if(t->getNumber() == 1)	
+		return count_unique_inorder(t->getLeft()) + 1 + count_unique_inorder(t->getRight());
+	else
+		return count_unique_inorder(t->getLeft()) + count_unique_inorder(t->getRight());
+}
 
 void print_seperator()
 {
-	cout << endl << "---------------------------------------------------------------------------------------------------" << endl;
+	cout << endl << "--------------------" << endl;
+}
+
+void print_large_seperator()
+{
+	cout << endl << endl << "--------------------------------------------------------------------------------" << endl << endl; 
 }
 
 
@@ -193,13 +220,16 @@ void BSTree_Fast<T>::print()
 	print_inorder(root);
 	print_seperator();	
 	
-	cout << findMax() << endl;
 	//count unique words (1 as number)
+	cout << "Unique Words: " << count_unique_inorder(root) << endl;
 
 	//count total words
+	cout << "Total Words: " << count_inorder(root) << endl;
 
 	//maximum depth
-	cout << endl << "Maximum Depth: " << getMaxDepth() << endl;;
+	cout << "Maximum Depth: " << getMaxDepth();
+
+	print_large_seperator();	
 }
 
 //----------------------------------------------------------------------------
