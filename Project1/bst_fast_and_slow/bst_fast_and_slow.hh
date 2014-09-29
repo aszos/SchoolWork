@@ -37,6 +37,7 @@ public:
   BSTNode<T> *getRight() { return right; }
   void setRight(BSTNode<T> * theRight) { right = theRight; }
 
+  void incrementNumber() { number++; }
   void print() { cout << key << " (" << number << ")" << endl; }
 
 private:
@@ -69,8 +70,10 @@ public:
   void insert(T &);                             // put a key into the BST 
   bool contains(T &);                           // does this BST contain a certain key?
   const T & findMax();                          // what is the smallest key in the BST?
+  void print();
 
   int getMaxDepth() { return maxDepth; }
+  void setMaxDepth(int i) { maxDepth = i; }
 
 private:
 
@@ -85,7 +88,50 @@ private:
 template<typename T>
 void BSTree_Fast<T>::insert(T & key)
 {
-  // ???
+	int currentMaxDepth = 1;
+	if(!root)
+	{
+		root = new BSTNode<T>(key);	
+	}	
+	else 
+	{
+		BSTNode<T> *current = root;
+		
+		while(current)
+		{
+			if(key > current->getKey())
+			{
+				currentMaxDepth++;
+
+				if(!current->getRight())
+				{
+					
+					BSTNode<T> *n = new BSTNode<T>(key);
+					current->setRight(n);	
+					break;	
+				}
+				current = current->getRight();	
+			}
+			else if(key < current->getKey())
+			{
+				currentMaxDepth++;
+
+				if(!current->getLeft())
+				{
+					BSTNode<T> *n = new BSTNode<T>(key);
+					current->setLeft(n);	
+					break;	
+				}	
+				current = current->getLeft();	
+			}	
+			else
+			{
+				current->incrementNumber();	
+				break;
+			}			
+		}
+	}	
+	setMaxDepth(currentMaxDepth);
 }
 
 //----------------------------------------------------------------------------
@@ -104,7 +150,56 @@ bool BSTree_Fast<T>::contains(T & key)
 template<typename T>
 const T & BSTree_Fast<T>::findMax()
 {
-  // ???
+	if(!root)
+	{
+		cout << "Cannot find the maximum in an empty tree. Exiting." << endl;
+		exit(1);
+	}
+	else
+	{
+		BSTNode<T> *current = root;
+		
+		while(current->getRight())
+		{
+			current = current->getRight(); 
+		}
+
+		return current->getKey();
+	}
+}
+
+template<typename T>
+void print_inorder(BSTNode<T> *t)
+{
+	if(!t)
+		return;
+	
+	print_inorder(t->getLeft());	
+	cout << t->getKey() << ", ";
+	print_inorder(t->getRight());	
+} 
+
+void print_seperator()
+{
+	cout << endl << "---------------------------------------------------------------------------------------------------" << endl;
+}
+
+
+template<typename T>
+void BSTree_Fast<T>::print()
+{
+	//print in-order
+	print_seperator();	
+	print_inorder(root);
+	print_seperator();	
+	
+	cout << findMax() << endl;
+	//count unique words (1 as number)
+
+	//count total words
+
+	//maximum depth
+	cout << endl << "Maximum Depth: " << getMaxDepth() << endl;;
 }
 
 //----------------------------------------------------------------------------
