@@ -140,7 +140,31 @@ void BSTree_Fast<T>::insert(T & key)
 template<typename T>
 bool BSTree_Fast<T>::contains(T & key)
 {
-  // ???
+	if(!root)
+	{
+		cout << "Key not found, empty binary search tree. Exiting";
+		exit(1);
+	}
+	else 
+	{
+		BSTNode<T> *current = root;	
+		while(current != NULL)
+		{
+			if(key == current->getKey())
+			{
+				return true;	
+			}
+			else if(key > current->getKey())
+			{
+				current = current->getRight();
+			}
+			else 
+			{
+				current = current->getLeft();
+			}
+		}
+		return false;	
+	}
 }
 
 //----------------------------------------------------------------------------

@@ -63,7 +63,6 @@ void driver(int argc, char** argv)
 int main(int argc, char** argv)
 {
   
-  //cout << "**Make sure the parameters when you call this program are bts.txt, doi.txt. and ge.txt.**" << endl;
   driver(argc, argv);
   return 1;
 }
