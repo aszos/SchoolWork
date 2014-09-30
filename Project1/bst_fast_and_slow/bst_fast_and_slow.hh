@@ -17,6 +17,26 @@ using namespace std;
 
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
+// Print Formatting Functions 
+//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+
+void print_seperator()
+{
+	cout << endl << "--------------------" << endl;
+}
+
+void print_large_seperator()
+{
+	cout << endl << endl << "--------------------------------------------------------------------------------" << endl << endl; 
+}
+
+//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+// BSTNode 
+//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+
 
 // the BSTNode class is what we're making the binary search tree out of
 
@@ -193,6 +213,8 @@ const T & BSTree_Fast<T>::findMax()
 	}
 }
 
+//----------------------------------------------------------------------------
+
 template<typename T>
 void print_inorder(BSTNode<T> *t)
 {
@@ -204,6 +226,8 @@ void print_inorder(BSTNode<T> *t)
 	print_inorder(t->getRight());	
 }
 
+//----------------------------------------------------------------------------
+
 template<typename T>
 int count_inorder(BSTNode<T> *t)
 {
@@ -212,6 +236,8 @@ int count_inorder(BSTNode<T> *t)
 	
 	return count_inorder(t->getLeft()) + t->getNumber()  + count_inorder(t->getRight());
 }
+
+//----------------------------------------------------------------------------
 
 template<typename T>
 int count_unique_inorder(BSTNode<T> *t)
@@ -225,16 +251,7 @@ int count_unique_inorder(BSTNode<T> *t)
 		return count_unique_inorder(t->getLeft()) + count_unique_inorder(t->getRight());
 }
 
-void print_seperator()
-{
-	cout << endl << "--------------------" << endl;
-}
-
-void print_large_seperator()
-{
-	cout << endl << endl << "--------------------------------------------------------------------------------" << endl << endl; 
-}
-
+//----------------------------------------------------------------------------
 
 template<typename T>
 void BSTree_Fast<T>::print()
@@ -276,6 +293,7 @@ public:
   void insert(T &);                             // put a key into the BST 
   bool contains(T &);                           // does this BST contain a certain key?
   const T & findMax();                          // what is the smallest key in the BST?
+  void print();
 
 private:
 
@@ -311,6 +329,11 @@ const T & BSTree_Slow<T>::findMax()
 }
 
 //----------------------------------------------------------------------------
-//----------------------------------------------------------------------------
+
+template<typename T>
+void BSTree_Slow<T>::print()
+{
+  // ???
+}
 
 #endif
