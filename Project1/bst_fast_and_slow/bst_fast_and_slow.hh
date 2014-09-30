@@ -93,13 +93,17 @@ public:
   const T & findMax();                          // what is the smallest key in the BST?
   void print();
 
+  void print_inorder(BSTNode<T> *); 
+  int count_unique_inorder(BSTNode<T> *);
+  int count_inorder(BSTNode<T> *);
+
+
   int getMaxDepth() { return maxDepth; }
   void setMaxDepth(int i) { maxDepth = i; }
 
 private:
 
   int maxDepth;
-
   BSTNode<T> *root;                             // pointer to the node at the root of the tree
 
 };
@@ -216,7 +220,7 @@ const T & BSTree_Fast<T>::findMax()
 //----------------------------------------------------------------------------
 
 template<typename T>
-void print_inorder(BSTNode<T> *t)
+void BSTree_Fast<T>::print_inorder(BSTNode<T> *t)
 {
 	if(!t)
 		return;
@@ -229,7 +233,7 @@ void print_inorder(BSTNode<T> *t)
 //----------------------------------------------------------------------------
 
 template<typename T>
-int count_inorder(BSTNode<T> *t)
+int BSTree_Fast<T>::count_inorder(BSTNode<T> *t)
 {
 	if(!t)
 		return 0;
@@ -240,7 +244,7 @@ int count_inorder(BSTNode<T> *t)
 //----------------------------------------------------------------------------
 
 template<typename T>
-int count_unique_inorder(BSTNode<T> *t)
+int BSTree_Fast<T>::count_unique_inorder(BSTNode<T> *t)
 {
 	if(!t)
 		return 0;
@@ -295,6 +299,10 @@ public:
   const T & findMax();                          // what is the smallest key in the BST?
   void print();
 
+  void print_inorder(vector < BSTNode<T> * > tree);
+  int count_unique_inorder(vector < BSTNode<T> * > tree);
+  int count_inorder(vector < BSTNode<T> * > tree);
+
 private:
 
   vector < BSTNode<T> * > tree;                 // vector of pointers to nodes in the "tree"
@@ -306,7 +314,8 @@ private:
 template<typename T>
 void BSTree_Slow<T>::insert(T & key)
 {
-  // ???
+	BSTNode<T> *n = new BSTNode<T>(key);
+	tree.push_back(n);	
 }
 
 //----------------------------------------------------------------------------
@@ -314,7 +323,7 @@ void BSTree_Slow<T>::insert(T & key)
 template<typename T>
 bool BSTree_Slow<T>::contains(T & key)
 {
-  // ???
+  // a simple loop through the vector 
 }
 
 //----------------------------------------------------------------------------
@@ -325,7 +334,31 @@ bool BSTree_Slow<T>::contains(T & key)
 template<typename T>
 const T & BSTree_Slow<T>::findMax()
 {
-  // ???
+	//loop through and try to find it
+}
+
+//----------------------------------------------------------------------------
+
+template<typename T>
+void BSTree_Slow<T>::print_inorder(vector < BSTNode<T> * > tree)
+{
+
+}
+
+//----------------------------------------------------------------------------
+
+template<typename T>
+int BSTree_Slow<T>::count_inorder(vector < BSTNode<T> * > tree)
+{
+	return 0; 
+}
+
+//---------------------------------------------------------------------------- 
+
+template<typename T>
+int BSTree_Slow<T>::count_unique_inorder(vector < BSTNode<T> * > tree)
+{
+	return 0;
 }
 
 //----------------------------------------------------------------------------
@@ -333,7 +366,18 @@ const T & BSTree_Slow<T>::findMax()
 template<typename T>
 void BSTree_Slow<T>::print()
 {
-  // ???
+	//print in-order
+	print_seperator();	
+	print_inorder(tree);
+	print_seperator();	
+	
+	//count unique words (1 as number)
+	cout << "Unique Words: " << count_unique_inorder(tree) << endl;
+
+	//count total words
+	cout << "Total Words: " << count_inorder(tree) << endl;
+
+	print_large_seperator();
 }
 
 #endif

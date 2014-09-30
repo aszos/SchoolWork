@@ -55,6 +55,7 @@ void driver(int argc, char** argv)
 		slow = new BSTree_Slow<string>();
 		cout << "File: " << argv[i] << endl;	
 		insert_file_into_tree(slow, argv[i]);	
+		slow->print();
 		delete slow;
 	}
 
