@@ -275,8 +275,6 @@ void BSTree_Fast<T>::print()
   cout << "Maximum Depth: " << getMaxDepth();
 
   print_large_seperator();  
-
-
 }
 
 //----------------------------------------------------------------------------
@@ -451,7 +449,6 @@ void BSTree_Slow<T>::print()
   cout << "Total Words: " << count_inorder(tree) << endl;
 
   print_large_seperator();
-
 }
 
 #endif
