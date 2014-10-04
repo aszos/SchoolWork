@@ -23,12 +23,12 @@ using namespace std;
 
 void print_seperator()
 {
-	cout << endl << "--------------------" << endl;
+  cout << endl << "--------------------" << endl;
 }
 
 void print_large_seperator()
 {
-	cout << endl << endl << "--------------------------------------------------------------------------------" << endl << endl; 
+  cout << endl << endl << "--------------------------------------------------------------------------------" << endl << endl; 
 }
 
 //----------------------------------------------------------------------------
@@ -113,50 +113,50 @@ private:
 template<typename T>
 void BSTree_Fast<T>::insert(T & key)
 {
-	int currentMaxDepth = 1;
-	if(!root)
-	{
-		root = new BSTNode<T>(key);	
-	}	
-	else 
-	{
-		BSTNode<T> *current = root;
-		
-		while(current)
-		{
-			if(key > current->getKey())
-			{
-				currentMaxDepth++;
+  int currentMaxDepth = 1;
+  if(!root)
+  {
+    root = new BSTNode<T>(key);  
+  }  
+  else 
+  {
+    BSTNode<T> *current = root;
+    
+    while(current)
+    {
+      if(key > current->getKey())
+      {
+        currentMaxDepth++;
 
-				if(!current->getRight())
-				{
-					
-					BSTNode<T> *n = new BSTNode<T>(key);
-					current->setRight(n);	
-					break;	
-				}
-				current = current->getRight();	
-			}
-			else if(key < current->getKey())
-			{
-				currentMaxDepth++;
+        if(!current->getRight())
+        {
+          
+          BSTNode<T> *n = new BSTNode<T>(key);
+          current->setRight(n);  
+          break;  
+        }
+        current = current->getRight();  
+      }
+      else if(key < current->getKey())
+      {
+        currentMaxDepth++;
 
-				if(!current->getLeft())
-				{
-					BSTNode<T> *n = new BSTNode<T>(key);
-					current->setLeft(n);	
-					break;	
-				}	
-				current = current->getLeft();	
-			}	
-			else
-			{
-				current->incrementNumber();	
-				break;
-			}			
-		}
-	}	
-	setMaxDepth(currentMaxDepth);
+        if(!current->getLeft())
+        {
+          BSTNode<T> *n = new BSTNode<T>(key);
+          current->setLeft(n);  
+          break;  
+        }  
+        current = current->getLeft();  
+      }  
+      else
+      {
+        current->incrementNumber();  
+        break;
+      }      
+    }
+  }  
+  setMaxDepth(currentMaxDepth);
 }
 
 //----------------------------------------------------------------------------
@@ -164,31 +164,31 @@ void BSTree_Fast<T>::insert(T & key)
 template<typename T>
 bool BSTree_Fast<T>::contains(T & key)
 {
-	if(!root)
-	{
-		cout << "Key not found, empty binary search tree. Exiting";
-		exit(1);
-	}
-	else 
-	{
-		BSTNode<T> *current = root;	
-		while(current != NULL)
-		{
-			if(key == current->getKey())
-			{
-				return true;	
-			}
-			else if(key > current->getKey())
-			{
-				current = current->getRight();
-			}
-			else 
-			{
-				current = current->getLeft();
-			}
-		}
-		return false;	
-	}
+  if(!root)
+  {
+    cout << "Key not found, empty binary search tree. Exiting";
+    exit(1);
+  }
+  else 
+  {
+    BSTNode<T> *current = root;  
+    while(current != NULL)
+    {
+      if(key == current->getKey())
+      {
+        return true;  
+      }
+      else if(key > current->getKey())
+      {
+        current = current->getRight();
+      }
+      else 
+      {
+        current = current->getLeft();
+      }
+    }
+    return false;  
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -199,22 +199,22 @@ bool BSTree_Fast<T>::contains(T & key)
 template<typename T>
 const T & BSTree_Fast<T>::findMax()
 {
-	if(!root)
-	{
-		cout << "Cannot find the maximum in an empty tree. Exiting." << endl;
-		exit(1);
-	}
-	else
-	{
-		BSTNode<T> *current = root;
-		
-		while(current->getRight())
-		{
-			current = current->getRight(); 
-		}
+  if(!root)
+  {
+    cout << "Cannot find the maximum in an empty tree. Exiting." << endl;
+    exit(1);
+  }
+  else
+  {
+    BSTNode<T> *current = root;
+    
+    while(current->getRight())
+    {
+      current = current->getRight(); 
+    }
 
-		return current->getKey();
-	}
+    return current->getKey();
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -222,12 +222,12 @@ const T & BSTree_Fast<T>::findMax()
 template<typename T>
 void BSTree_Fast<T>::print_inorder(BSTNode<T> *t)
 {
-	if(!t)
-		return;
-	
-	print_inorder(t->getLeft());	
-	cout << t->getKey() << ", ";
-	print_inorder(t->getRight());	
+  if(!t)
+    return;
+  
+  print_inorder(t->getLeft());  
+  t->print();
+  print_inorder(t->getRight());  
 }
 
 //----------------------------------------------------------------------------
@@ -235,10 +235,10 @@ void BSTree_Fast<T>::print_inorder(BSTNode<T> *t)
 template<typename T>
 int BSTree_Fast<T>::count_inorder(BSTNode<T> *t)
 {
-	if(!t)
-		return 0;
-	
-	return count_inorder(t->getLeft()) + t->getNumber()  + count_inorder(t->getRight());
+  if(!t)
+    return 0;
+  
+  return count_inorder(t->getLeft()) + t->getNumber()  + count_inorder(t->getRight());
 }
 
 //----------------------------------------------------------------------------
@@ -246,13 +246,13 @@ int BSTree_Fast<T>::count_inorder(BSTNode<T> *t)
 template<typename T>
 int BSTree_Fast<T>::count_unique_inorder(BSTNode<T> *t)
 {
-	if(!t)
-		return 0;
+  if(!t)
+    return 0;
 
-	if(t->getNumber() == 1)	
-		return count_unique_inorder(t->getLeft()) + 1 + count_unique_inorder(t->getRight());
-	else
-		return count_unique_inorder(t->getLeft()) + count_unique_inorder(t->getRight());
+  if(t->getNumber() == 1)  
+    return count_unique_inorder(t->getLeft()) + 1 + count_unique_inorder(t->getRight());
+  else
+    return count_unique_inorder(t->getLeft()) + count_unique_inorder(t->getRight());
 }
 
 //----------------------------------------------------------------------------
@@ -260,21 +260,23 @@ int BSTree_Fast<T>::count_unique_inorder(BSTNode<T> *t)
 template<typename T>
 void BSTree_Fast<T>::print()
 {
-	//print in-order
-	print_seperator();	
-	print_inorder(root);
-	print_seperator();	
-	
-	//count unique words (1 as number)
-	cout << "Unique Words: " << count_unique_inorder(root) << endl;
+  //print in-order
+  print_seperator();  
+  print_inorder(root);
+  print_seperator();  
+  
+  //count unique words (1 as number)
+  cout << "Unique Words: " << count_unique_inorder(root) << endl;
 
-	//count total words
-	cout << "Total Words: " << count_inorder(root) << endl;
+  //count total words
+  cout << "Total Words: " << count_inorder(root) << endl;
 
-	//maximum depth
-	cout << "Maximum Depth: " << getMaxDepth();
+  //maximum depth
+  cout << "Maximum Depth: " << getMaxDepth();
 
-	print_large_seperator();	
+  print_large_seperator();  
+
+
 }
 
 //----------------------------------------------------------------------------
@@ -300,7 +302,7 @@ public:
   void print();
 
   void print_inorder(vector < BSTNode<T> * > tree);
-  int count_unique_inorder(vector < BSTNode<T> * > tree);
+  int count_unique(vector < BSTNode<T> * > tree);
   int count_inorder(vector < BSTNode<T> * > tree);
 
 private:
@@ -314,8 +316,17 @@ private:
 template<typename T>
 void BSTree_Slow<T>::insert(T & key)
 {
-	BSTNode<T> *n = new BSTNode<T>(key);
-	tree.push_back(n);	
+  for(int i = 0; i < tree.size(); i++)
+  {
+    if(key == tree[i]->getKey())
+    {
+      tree[i]->incrementNumber();
+      return;
+    }
+  }
+  
+  BSTNode<T> *n = new BSTNode<T>(key);
+  tree.push_back(n);  
 }
 
 //----------------------------------------------------------------------------
@@ -324,6 +335,21 @@ template<typename T>
 bool BSTree_Slow<T>::contains(T & key)
 {
   // a simple loop through the vector 
+
+  if(tree.size() == 0)
+  {
+    cout << "Key not found, empty binary search tree. Exiting";
+    exit(1);
+  }
+  else
+  {
+    for(int i = 0; i < tree.size(); i++)
+    {  
+      if(tree[i]->getKey() == key)
+        return true;  
+    }
+    return false;  
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -334,7 +360,23 @@ bool BSTree_Slow<T>::contains(T & key)
 template<typename T>
 const T & BSTree_Slow<T>::findMax()
 {
-	//loop through and try to find it
+  if(tree.size() == 0)
+  {
+    cout << "Key not found, empty binary search tree. Exiting";
+    exit(1);
+  }
+  else
+  {
+    BSTNode<T> *currentMax = tree[0]; 
+
+    for(int i = 0; i < tree.size(); i++)
+    {  
+      if(currentMax->getKey() < tree[i]->getKey())
+        currentMax = tree[i];
+    }
+    
+    return currentMax->getKey();
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -342,7 +384,16 @@ const T & BSTree_Slow<T>::findMax()
 template<typename T>
 void BSTree_Slow<T>::print_inorder(vector < BSTNode<T> * > tree)
 {
-
+  if(tree.size() == 0)
+  {
+    cout << "Key not found, empty binary search tree. Exiting";
+    exit(1);
+  }
+  else
+  {
+    for(int i = 0; i < tree.size(); i++)
+      tree[i]->print();
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -350,15 +401,37 @@ void BSTree_Slow<T>::print_inorder(vector < BSTNode<T> * > tree)
 template<typename T>
 int BSTree_Slow<T>::count_inorder(vector < BSTNode<T> * > tree)
 {
-	return 0; 
+  if(tree.size() == 0)
+  {
+    cout << "Key not found, empty binary search tree. Exiting";
+    exit(1);
+  }
+  else
+  {
+    int sum = 0;
+
+    for(int i = 0; i < tree.size(); i++)
+    {
+      sum = sum + tree[i]->getNumber(); 
+    }
+      
+    return sum;
+  }
 }
 
 //---------------------------------------------------------------------------- 
 
 template<typename T>
-int BSTree_Slow<T>::count_unique_inorder(vector < BSTNode<T> * > tree)
+int BSTree_Slow<T>::count_unique(vector < BSTNode<T> * > tree)
 {
-	return 0;
+  int unique = 0;
+
+  for(int i = 0; i < tree.size(); i++)
+  {
+    unique = (tree[i]->getNumber() == 1)? (unique + 1):(unique);    
+  }
+    
+  return unique;
 }
 
 //----------------------------------------------------------------------------
@@ -366,18 +439,19 @@ int BSTree_Slow<T>::count_unique_inorder(vector < BSTNode<T> * > tree)
 template<typename T>
 void BSTree_Slow<T>::print()
 {
-	//print in-order
-	print_seperator();	
-	print_inorder(tree);
-	print_seperator();	
-	
-	//count unique words (1 as number)
-	cout << "Unique Words: " << count_unique_inorder(tree) << endl;
+  //print in-order
+  print_seperator();  
+  print_inorder(tree);
+  print_seperator();  
+  
+  //count unique words (1 as number)
+  cout << "Unique Words: " << count_unique(tree) << endl;
 
-	//count total words
-	cout << "Total Words: " << count_inorder(tree) << endl;
+  //count total words
+  cout << "Total Words: " << count_inorder(tree) << endl;
 
-	print_large_seperator();
+  print_large_seperator();
+
 }
 
 #endif
