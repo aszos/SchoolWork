@@ -156,4 +156,9 @@ Then we do a left(A) .
 A       C
 
 --------------------------------------------------
+Things to note:
+-Inserts don't modify the tree that much! You only have to apply the Single/Double Rotation ONCE! 
+-Deletes will screw a lot of things up! You gotta keep going and checking the balance.
+-When you delete a node, you must recompute the balance factors.
+
 */
