@@ -88,7 +88,7 @@ AVL Trees
 inserts and deletes work the same, you just need to check it every time!
 The check is gonna check the balance notation.
 
-Tree rotations: BAsic transform that will be used to fix imbalances
+Tree rotations: Basic transform that will be used to fix imbalances
 	1. Changes (possibly) subtree height.
 	2. Preserves BST ordering property.
 

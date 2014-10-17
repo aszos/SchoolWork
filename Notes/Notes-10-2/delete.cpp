@@ -27,7 +27,6 @@ We want to "count" the number of operations that an algorithm does
 
 We want to know the worst case performance!
 
-
 What is the worst case?
 Depends on the efficiency of functions called is worse.
 
@@ -59,7 +58,6 @@ O(1/2 (n^2 + n)) --> O(n^2 + n) --> O(n^2)
 2 + 2n is O(n^3)
        is O(n^2)
        is O(n), is the smallest
-
 
 --------------------------------------------------
 **********Big O Function Classes**********
