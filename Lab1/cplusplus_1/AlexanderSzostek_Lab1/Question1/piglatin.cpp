@@ -74,3 +74,4 @@ int main()
 	cout << piglatin(o) << endl;
 	cout << piglatin(u) << endl;
 	cout << piglatin(h) << endl;
+}
