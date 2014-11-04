@@ -114,18 +114,27 @@ bool dumb_union_break_wall(int dir, int i, int j)
   }  
 }
 
-//gets the number of elements in the largest equivalence class 
+//gets the height of the largest equivalence class 
 
 int get_largest_eq()
 {
-  int current_largest = 1;
+  int largest = 0;
 
   for(int i = 0; i < U->num_elements; i++)
   {
-    current_largest = (current_largest > U->S[i])? (U->S[i]):(current_largest);    
-  }
+    int current_largest = 0;
+    int current = U->S[i];
 
-  return -current_largest;
+    while(current > 0)
+    {
+      current_largest++;
+      current = U->S[current];
+    }
+
+    if(current_largest > largest)
+      largest = current_largest; 
+  }
+  return largest;
 }
 
 //prints out statistics only if the user wanted to see them 
@@ -151,7 +160,7 @@ void print_final_maze()
      U->print_horizontal();
    }
    
-   cout << "Size of Largest Equivalence Class: " << get_largest_eq() << endl;
+   cout << "Height of Largest Equivalence Class: " << get_largest_eq() << endl;
 }
 
 
