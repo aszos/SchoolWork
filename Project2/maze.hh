@@ -1,9 +1,4 @@
 //----------------------------------------------------------------------------
-// by Christopher Rasmussen, cer@cis.udel.edu
-// created: October, 2014
-// v. 1.00
-//----------------------------------------------------------------------------
-
 #ifndef MAZE_HH
 #define MAZE_HH
 
@@ -75,7 +70,6 @@ int rand_low_high(int low, int high)
 
 // note that the cells in the last column have no east wall (those walls are exterior)
 // and the cells in the last row have no south wall (also exterior)
-
 
 class Maze
 {

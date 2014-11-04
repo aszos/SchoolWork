@@ -1,8 +1,4 @@
 //----------------------------------------------------------------------------
-// by Christopher Rasmussen, cer@cis.udel.edu
-// created: October, 2014
-// v. 1.00
-//----------------------------------------------------------------------------
 
 #ifndef UNIONFIND_HH
 #define UNIONFIND_HH
@@ -54,7 +50,10 @@ public:
 
 int UnionFind::find(int x)
 {
-  // ???
+  if(S[x] < 0)
+    return x;
+  else
+    return (S[x] = find(S[x]));
 }
 
 //----------------------------------------------------------------------------
@@ -67,7 +66,7 @@ int UnionFind::find(int x)
 
 void UnionFind::union_sets(int s1, int s2)
 {
-  // ???
+  S[s2] = s1;
 }
 
 //----------------------------------------------------------------------------
@@ -79,7 +78,16 @@ void UnionFind::union_sets(int s1, int s2)
 
 void UnionFind::union_sets_by_size(int s1, int s2)
 {
-  // ???
+  if(s1 < s2)
+  {
+    S[s1] += S[s2];
+    S[s2] = s1;
+  }
+  else
+  {
+    S[s2] += S[s1];
+    S[s1] = s2;
+  }
 }
 
 //----------------------------------------------------------------------------
