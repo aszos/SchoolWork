@@ -53,7 +53,7 @@ int UnionFind::find(int x)
   if(S[x] < 0)
     return x;
   else
-    return (S[x] = find(S[x]));
+    return find(S[x]);
 }
 
 //----------------------------------------------------------------------------
