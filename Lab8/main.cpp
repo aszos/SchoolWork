@@ -4,6 +4,8 @@
 
 int main(int argc, char* argv[])
 {
+	HashTable *h = new HashTable(argc, argv);
+	h->print_hash_table();
 	return 0;
 }
 

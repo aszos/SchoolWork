@@ -11,6 +11,7 @@ class HashTable
 		HashTable(){ }
 		HashTable(int length, char** words) 
 		{
+			print_hashed_parameters(length, words);
 			hash_table = generate_hash_table(length, *words);
 		}
 
@@ -26,24 +27,9 @@ class HashTable
 		int *hash_table;
 };
 
-
-int HashTable::hash_char(char a)
-{
-	return (((int) a) - DEC_TO_INT);	
-}
-
-int HashTable::hash_char_array(char *a)
-{
-	int hash = 0;
-
-	for(int i = 0; i < strlen(a); i++)
-	{
-		hash += hash_char(a[i]);
-	}
-
-	return (hash % HASH_MOD);
-}
-
+//------------------------//
+//Printing Functions
+//------------------------//
 void HashTable::print_hashed_char_array(char *a)
 {
 	int i;
@@ -65,13 +51,6 @@ void HashTable::print_hashed_parameters(int len, char * argv[])
 	}
 }
 
-int * HashTable::generate_hash_table(int argc, char* argv)
-{
-	int * ht = new int[argc]();
-
-	return ht;
-}
-
 void HashTable::print_hash_table()
 {
 	for(int i = 0 ; i < length; i++)
@@ -81,3 +60,32 @@ void HashTable::print_hash_table()
 
 	cout << " | " << endl;
 }
+
+//------------------------//
+//Hashing Functions
+//------------------------//
+int HashTable::hash_char(char a)
+{
+	return (((int) a) - DEC_TO_INT);	
+}
+
+int HashTable::hash_char_array(char *a)
+{
+	int hash = 0;
+
+	for(int i = 0; i < strlen(a); i++)
+	{
+		hash += hash_char(a[i]);
+	}
+
+	return (hash % HASH_MOD);
+}
+
+int * HashTable::generate_hash_table(int argc, char* argv)
+{
+	int * ht = new int[argc]();
+
+	return ht;
+}
+
+
