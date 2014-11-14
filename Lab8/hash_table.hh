@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <algorithm>
 
 using namespace std;
 const int DEC_TO_INT = 97;
@@ -9,22 +10,26 @@ class HashTable
 {
 	public:
 		HashTable(){ }
-		HashTable(int length, char** words) 
+		HashTable(int length, char** argv) 
 		{
-			print_hashed_parameters(length, words);
-			hash_table = generate_hash_table(length, *words);
+			copy(argv, argv + length, words);
+			print_hashed_parameters();
+			hash_table = generate_hash_table();
 		}
 
 		int hash_char(char a);
 		int hash_char_array(char *a);
-		int * generate_hash_table(int argc, char* argv);
+		int * generate_hash_table();
 		void print_hashed_char_array(char *a);
-		void print_hashed_parameters(int len, char * argv[]);
+		void print_hashed_parameters();
+		void print_parameters();
 		void print_hash_table();	
+
 	private:
 		int length;
 		int load_factor;	
-		int *hash_table;
+		char** words;
+		int* hash_table;
 };
 
 //------------------------//
@@ -42,15 +47,6 @@ void HashTable::print_hashed_char_array(char *a)
 	cout << hash_char(a[i]) << " (mod 11) = " << hash_char_array(a) << endl; 
 }
 
-void HashTable::print_hashed_parameters(int len, char * argv[])
-{
-	for(int i = 1; i < len; i++)
-	{
-		cout << "Char: " << argv[i] << " | "; 
-		print_hashed_char_array(argv[i]);
-	}
-}
-
 void HashTable::print_hash_table()
 {
 	for(int i = 0 ; i < length; i++)
@@ -60,6 +56,24 @@ void HashTable::print_hash_table()
 
 	cout << " | " << endl;
 }
+
+void HashTable::print_parameters()
+{
+	for(int i = 1; i < length; i++)
+	{
+		cout << words[i] << " | "; 
+	}
+}
+
+void HashTable::print_hashed_parameters()
+{
+	for(int i = 1; i < length; i++)
+	{
+		cout << "Char: " << words[i] << " | "; 
+		print_hashed_char_array(words[i]);
+	}
+}
+
 
 //------------------------//
 //Hashing Functions
@@ -81,9 +95,9 @@ int HashTable::hash_char_array(char *a)
 	return (hash % HASH_MOD);
 }
 
-int * HashTable::generate_hash_table(int argc, char* argv)
+int * HashTable::generate_hash_table()
 {
-	int * ht = new int[argc]();
+	int * ht = new int[length]();
 
 	return ht;
 }
