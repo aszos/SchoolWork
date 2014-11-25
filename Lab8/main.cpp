@@ -8,4 +8,10 @@ int main(int argc, char* argv[])
 	h->print_hash_table();
 	return 0;
 }
+/*
+HashItem - Struct (no overhead)
+-> Contains key and pointer
+-> Store keys as binary tree
 
+
+*/

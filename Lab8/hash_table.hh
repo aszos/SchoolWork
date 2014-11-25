@@ -12,11 +12,10 @@ class HashTable
 		HashTable(){ }
 		HashTable(int length, char** argv) 
 		{
-			//copy(argv, argv + length, words);
-			//How do we copy each element of one array to another?	
-			//Maybe use vectors?
+			//memcpy(words, argv, length);
 			print_hashed_parameters();
 			hash_table = generate_hash_table();
+			length = length;
 		}
 
 		int hash_char(char a);
@@ -30,7 +29,7 @@ class HashTable
 	private:
 		int length;
 		int load_factor;	
-		char** words;
+		char** words[length];
 		int* hash_table;
 };
 
@@ -103,5 +102,4 @@ int * HashTable::generate_hash_table()
 
 	return ht;
 }
-
 
