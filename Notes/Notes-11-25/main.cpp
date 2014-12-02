@@ -69,18 +69,28 @@ mergeSort(data[])
 	}
 }
 
-
 merge(array1[], array2[], array3[])
 {
 	i1, i2, i3;
 	//current indices into arrays
 
 	while(i2 < array2.size() && i3 < array3.size())
+	{	
 		if(array[i2] < array[i3])
 			array[i1++] = array2[i2++];	
 		else
 			array1[i1++] = array3[i3++];
+	}
+	
+	while array2 contains data
+	{
+		array1[i1++] = array2[i2++];
+	}	
+	
+	while array3 contains data
+	{
+		array1[i1++] = array3[i3++];
+	}
 
-
-} 
+}
 */
