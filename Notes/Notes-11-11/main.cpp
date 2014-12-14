@@ -28,7 +28,7 @@ Designing the Hash Functions
 
 ----------------------------------------
 1. "Chaining" / "Seperate Chaining"
-- Maintain linked list at each hash table slot; add to it when tehre's a collision on insert()
+- Maintain linked list at each hash table slot; add to it when there's a collision on insert()
 - set max length on any chain
 - When Load factor is too high, m bigger and rehash h'(k) = k mod m'
 

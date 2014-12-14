@@ -66,7 +66,7 @@ Hashing Applications
 	-> h(fileF2) -> bitstring Q2 (with q2 bits) 
 	We expect F1 =/= F2 -> Q1 =/= Q2	
 
-Common Hasing Functions
+Common Hashing Functions
 	- MD5 Hashing Function -> Converts files to 128-bitstring = 32 hex values
 	- SHA1 Hashing Function -> Converts files to 160-bitstring = 40 hex values
 

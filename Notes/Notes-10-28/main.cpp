@@ -24,7 +24,7 @@ An equivalence relation ~ "induces" equivalence classes of a set S.
 ----------------------------------------
 Equivalence Classes - Data Structures
 ----------------------------------------
-- Given a set S with n members, assume all elemwents in their own equivalence classes.
+- Given a set S with n members, assume all elements in their own equivalence classes.
 
 Two Operations
 1. Given an element a of S, what equivalence class is it in?
