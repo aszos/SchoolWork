@@ -1,7 +1,25 @@
 Midterm 1 Topics 
 ====================
+#Practice Material
+####Exceptions
+[Exceptions Reading](http://docs.oracle.com/javase/tutorial/essential/exceptions/)
+[Exceptions Practice](http://www.indiabix.com/java-programming/exceptions)
+####Enumerations
+[Enumerations Reading](http://www.cloudhadoop.com/2012/02/java-enums-tutorial-best-10-examples-of.html)
+####Garbage Collection
+[Garbage Collection Practice](http://www.oracle.com/webfolder/tjjechnetwork/tutorials/obe/java/gc01/index.html)
+####Polymorphism
+[Oracle Docs](http://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
+####Scrums
+[Scrum Video](https://www.youtube.com/watch?v=XU0llRltyFM)
+####Storyboarding
+[Storyboardthat Article](http://www.storyboardthat.com/articles/software-development/agile-user-stories)
+[generalassemb.ly Article](http://blog.generalassemb.ly/exit-flatsville-using-storyboards-energize-agile-user-stories/)
+[uxmag Article](http://uxmag.com/articles/storyboarding-in-the-software-design-process)
+[agilemodeling wiki](http://www.agilemodeling.com/artifacts/userStory.htm)
+
 #Software Process Models 
-	- Waterfall
+	### Waterfall
 		- A sequential design process in which progress is seen as flowing steadily 
 		downwards through the phases of:
 			• Conception
@@ -15,14 +33,14 @@ Midterm 1 Topics
 		- A hardware-oriented model. Was adapted because no other models were in available.
 		- One should only move to a phase oece the preceding phase is reviewed and verified.
 			-> Because moving back a phase would be costly.
-	- Incremental
+	### Incremental
 		- A "multi-waterfall" cycle.
 		- Parts of the final product are put through waterfall model.
 		- A working version of software is produced during the first module.
 			-> Needs good planning and design
 			-> Need clear definition of the entire system
 			-> Higher cost than a single waterfall
-	- Agile 
+	### Agile 
 		- Many different models available, similar goal
 		- Keep it Simple, Stupid (KISS)
 		- Requirement Prioritization
@@ -30,7 +48,7 @@ Midterm 1 Topics
 		- Difficult to apply to large teams
 		- Sharing and collaberation is paramount 
 		- Limited based on modeling skills
-	- Scrum
+	### Scrum
 		- Agile Software Development framework 
 		- "a flexible, holistic product development strategy"
 		- Composed of many sprints
@@ -39,7 +57,7 @@ Midterm 1 Topics
 ---
 #Activities within Software Product 
 	- lifecycles
-	-  phases 
+	- phases 
 ---
 #Prototyping
 ---
@@ -48,7 +66,7 @@ Midterm 1 Topics
 #User Stories and Storyboards
 ---
 #libGDX concepts
-	- Drawing sprites/text
+	### Drawing sprites/text
 		- Handled by OpenGL through OpenGL viewport
 		- SpriteBatch
 			-> Sends all images as one message to GPU
@@ -65,7 +83,7 @@ Midterm 1 Topics
 			-> Display regions of a texture
 		- Sprite
 			-> Both a texture region, the geometry of where it will be drawn, and color
-	- Handling user input
+	### Handling user input
 		- Input Module
 			-> Gdx.input...
 			-> InputProcessor
@@ -73,7 +91,7 @@ Midterm 1 Topics
 				- Create class, implement InputProcessor, instantiate in classes
 				where you need to handle user input
 				- Gdx.input.setInputProcessor(inputProcessor);	
-	- render loop 
+	### render() 
 		-> Called every 30/50/80 times per second 
 			- Depends on Frames per Second
 		-> If you disable continious rendering, can only trigger render() when...
@@ -87,7 +105,7 @@ Midterm 1 Topics
 	- class diagrams 
 ---
 #Java Concepts 
-	- Exceptions 
+	### Exceptions 
 		- An event that occurs during the execution of a program that disrupts the normal
 		flow of instructions.
 		- When an errors occurs within a method, the method creates an object and hands it
@@ -106,11 +124,11 @@ Midterm 1 Topics
 				- Internal runtime problems
 			-> Unchecked Exceptions
 				- Errors and runtime exceptions 
-	- Enumerations
+	### Enumerations
 		- Constant values that cannot be changed.
 		- public enum <name of enum class>	
 		- Instantiate as if it were a normal class, refer to parts as properties
-	- Garbage Collection
+	### Garbage Collection
 		- Definition: the process of looking at heap memory, identifying which objects 
 		are in use and which are not and deleting unused objects.
 		- Steps of Automatic Garbage Collection
@@ -135,6 +153,6 @@ Midterm 1 Topics
 				-> Classes and Methods.
 				-> Full Garbage collection.
 			- We cannot delete objects! The Garbage collector takes care of that.
-	- Polymorphism 
+	### Polymorphism 
 			- See Lab 3!
 ---
