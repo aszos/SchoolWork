@@ -1,0 +1,105 @@
+====================
+Midterm 1 Topics 
+====================
+• Software Process Models 
+	- Waterfall
+		- A sequential design process in which progress is seen as flowing steadily 
+		downwards through the phases of:
+			• Conception
+			• Initiation
+			• Analysis
+			• Design
+			• Construction
+			• Testing
+			• Production / Implementation
+			• Maintenance
+		- A hardware-oriented model. Was adapted because no other models were in available.
+		- One should only move to a phase oece the preceding phase is reviewed and verified.
+			-> Because moving back a phase would be costly.
+	- Incremental
+		- A "multi-waterfall" cycle.
+		- Parts of the final product are put through waterfall model.
+		- A working version of software is produced during the first module.
+			-> Needs good planning and design
+			-> Need clear definition of the entire system
+			-> Higher cost than a single waterfall
+	- Agile 
+		- Many different models available, similar goal
+		- Keep it Simple, Stupid (KISS)
+		- Requirement Prioritization
+		- Much more flexible for fast changing environment
+		- Difficult to apply to large teams
+		- Sharing and collaberation is paramount 
+		- Limited based on modeling skills
+	- Scrum
+		- Agile Software Development framework 
+		- "a flexible, holistic product development strategy"
+		- Composed of many sprints
+			- a "timeboxed" effort
+			- lasts between one week to one month (two weeks typical)		
+• Activities within Software Product 
+	- lifecycles
+	-  phases 
+• Prototyping
+• Functional Requirements
+• User Stories and Storyboards
+• libGDX concepts
+	- Drawing sprites/text
+		- SpriteBatch
+	- Handling user input
+	- render loop 
+• UML 
+	- use cases
+	- sequence diagrams
+	- class diagrams 
+• Java Concepts 
+	- Exceptions 
+		- An event that occurs during the execution of a program that disrupts the normal
+		flow of instructions.
+		- When an errors occurs within a method, the method creates an object and hands it
+		off to the runtime system.
+		- Call Stack
+			Method where error occurred          ^
+			Method without an exception handler  |
+			Method with an exception handler     |
+			main 				     |
+		- Runtime system searches for something in stack to catch the exception
+			-> if none is found, runtime system terminates
+		- Three types of Exceptions	
+			-> Check Exception
+				- Check for anything unexpected or not correct input
+			-> Runtime Exception
+				- Internal runtime problems
+			-> Unchecked Exceptions
+				- Errors and runtime exceptions 
+	- Enumerations
+		- Constant values that cannot be changed.
+		- public enum <name of enum class>	
+		- Instantiate as if it were a normal class, refer to parts as properties
+	- Garbage Collection
+		- Definition: the process of looking at heap memory, identifying which objects 
+		are in use and which are not and deleting unused objects.
+		- Steps of Automatic Garbage Collection
+			1. Marking
+				- Identifying which pieces of memory is being used. 
+			2. Normal Deletion
+				- Removing of unreferenced objects leaving reference objects and pointers
+				 to free space.
+				a. Deleting with Compacting
+					- Compact remaining objects after deleting
+		- JMV Generations
+			- Young Generation
+				-> New objects are allocated and aged.
+				-> When full, causes a minor garbage collection.
+					- Stop the World Event!
+						- Stops all threads and cleans things up before resuming.
+			- Old Generation
+				-> Long surviving objects.
+				-> There exists some sort of threshold for Young to Old
+				-> Major Garbage Collection
+			- Permanent Generation
+				-> Classes and Methods.
+				-> Full Garbage collection.
+			- We cannot delete objects! The Garbage collector takes care of that.
+	- Polymorphism 
+

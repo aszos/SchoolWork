@@ -1,0 +1,36 @@
+***First Priority Goals***
+Students know the critical dates on the academic calendar (drop add)
+Students know their roles and responsibilities as advisees and for the advisors
+Students know where to obtain resources to help them be academically successful - Math tutoring, writing center
+Students know where to obtain resources to help them be successful
+Students know where to go to change their majors or to research changing their majors
+
+Second Priority Goals:
+Students know how their choice of major connects to their career goals.
+Students have knowledge of the Career Services Center
+Students are aware of career development process
+Students begin to assess their interests and abilities
+Students are knowledgeable about on-and off-campus opportunities available to them to help them grow as individuals (e.g., Undergraduate Research, Study Abroad, Service Learning)
+
+Requirement (not a goal!):
+This project would be a fun and educational game that would allow the UD to assess students’ knowledge
+
+Personal Notes:
+- Imagine AlcoholEDU, but a lot better.
+- Role-playing game, adventure game as a front-end
+- Backend, needs to show where students struggled and had problems
+- Students need to know how to do Degree Audit, how courses work
+- Use students outside of UD, outside of major (CSW)
+- We can use UD branded things
+- Teaching and testing, not just testing
+- Consider mastery approach (repeat until failure, show how many failures)
+- Short game, think less than an hour
+
+Personal Ideas:
+- Adventure Games, Puzzle based (think King's Quest, Nancy Drew, Monkey Island, etc.)
+- Adviser helping students, (think Tapper)
+- Look at popular games for inspiration (something that's simple to play)
+
+
+Don't ask for meeting on weekends! Communicate with the client!!!
+
