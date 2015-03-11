@@ -1,5 +1,7 @@
 Midterm 1 Topics 
 ====================
+
+
 ##Practice Material
 ####Exceptions
 [Exceptions Reading](http://docs.oracle.com/javase/tutorial/essential/exceptions/)
@@ -64,16 +66,6 @@ Midterm 1 Topics
 	- Composed of many sprints
 		- a "timeboxed" effort
 		- lasts between one week to one month (two weeks typical)		
----
-##Activities within Software Product 
-	- lifecycles
-	- phases 
----
-##Prototyping
----
-##Functional Requirements
----
-##User Stories and Storyboards
 ---
 ##libGDX concepts
 ### Drawing sprites/text
