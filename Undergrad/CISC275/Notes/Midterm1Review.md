@@ -12,7 +12,7 @@ Midterm 1 Topics
 [Enumerations Reading](http://www.cloudhadoop.com/2012/02/java-enums-tutorial-best-10-examples-of.html)
 
 ####Garbage Collection
-[Garbage Collection Practice](http://www.oracle.com/webfolder/tjjechnetwork/tutorials/obe/java/gc01/index.html)
+[Garbage Collection Practice](http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html)
 
 ####Polymorphism
 [Oracle Docs](http://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
