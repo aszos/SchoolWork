@@ -45,9 +45,37 @@ Midterm 1 Topics
 • User Stories and Storyboards
 • libGDX concepts
 	- Drawing sprites/text
+		- Handled by OpenGL through OpenGL viewport
 		- SpriteBatch
+			-> Sends all images as one message to GPU
+			-> How to use 
+				1. Instantiate SpriteBatch
+				2. call .begin()
+				3. call .draw() images/text on each texture you wish to show
+				4. .end() when done drawing
+		- Texture
+			-> Class that handles images
+			-> Decodes images and loads into GPU memory	
+		- TextureRegion	
+			-> Same thing as texture
+			-> Display regions of a texture
+		- Sprite
+			-> Both a texture region, the geometry of where it will be drawn, and color
 	- Handling user input
+		- Input Module
+			-> Gdx.input...
+			-> InputProcessor
+				- Interface that has built in methods for user input
+				- Create class, implement InputProcessor, instantiate in classes
+				where you need to handle user input
+				- Gdx.input.setInputProcessor(inputProcessor);	
 	- render loop 
+		-> Called every 30/50/80 times per second 
+			- Depends on Frames per Second
+		-> If you disable continious rendering, can only trigger render() when...
+			1. An input event is triggered
+			2. Gdx.graphics.requestRendering() is called
+			3. Gdx.app.postRunnable is called
 • UML 
 	- use cases
 	- sequence diagrams
@@ -59,10 +87,10 @@ Midterm 1 Topics
 		- When an errors occurs within a method, the method creates an object and hands it
 		off to the runtime system.
 		- Call Stack
-			Method where error occurred          ^
-			Method without an exception handler  |
-			Method with an exception handler     |
-			main 				     |
+			^	Method where error occurred          
+			|	Method without an exception handler  
+			|	Method with an exception handler     
+			|	main 				     
 		- Runtime system searches for something in stack to catch the exception
 			-> if none is found, runtime system terminates
 		- Three types of Exceptions	
@@ -102,4 +130,5 @@ Midterm 1 Topics
 				-> Full Garbage collection.
 			- We cannot delete objects! The Garbage collector takes care of that.
 	- Polymorphism 
+			- See Lab 3!
 
