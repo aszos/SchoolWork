@@ -1,6 +1,6 @@
 Midterm 1 Topics 
 ====================
-#H1 Software Process Models 
+#Software Process Models 
 	- Waterfall
 		- A sequential design process in which progress is seen as flowing steadily 
 		downwards through the phases of:
@@ -36,13 +36,18 @@ Midterm 1 Topics
 		- Composed of many sprints
 			- a "timeboxed" effort
 			- lasts between one week to one month (two weeks typical)		
-#H1 Activities within Software Product 
+---
+#Activities within Software Product 
 	- lifecycles
 	-  phases 
-#H1 Prototyping
-#H1 Functional Requirements
-#H1 User Stories and Storyboards
-#H1 libGDX concepts
+---
+#Prototyping
+---
+#Functional Requirements
+---
+#User Stories and Storyboards
+---
+#libGDX concepts
 	- Drawing sprites/text
 		- Handled by OpenGL through OpenGL viewport
 		- SpriteBatch
@@ -75,11 +80,13 @@ Midterm 1 Topics
 			1. An input event is triggered
 			2. Gdx.graphics.requestRendering() is called
 			3. Gdx.app.postRunnable is called
-#H1 UML 
+---
+#UML 
 	- use cases
 	- sequence diagrams
 	- class diagrams 
-#H1 Java Concepts 
+---
+#Java Concepts 
 	- Exceptions 
 		- An event that occurs during the execution of a program that disrupts the normal
 		flow of instructions.
@@ -130,4 +137,4 @@ Midterm 1 Topics
 			- We cannot delete objects! The Garbage collector takes care of that.
 	- Polymorphism 
 			- See Lab 3!
-
+---
