@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0072)http://nameless.cis.udel.edu/class_wiki/index.php/CISC220_F2014_Project1 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="generator" content="MediaWiki 1.13.0">
+		<meta name="keywords" content="CISC220 F2014 Project1">
+		<link rel="shortcut icon" href="http://nameless.cis.udel.edu/favicon.ico">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://nameless.cis.udel.edu/class_wiki/opensearch_desc.php" title="Dynamic Vision Lab (en)">
+		<link rel="alternate" type="application/rss+xml" title="Dynamic Vision Lab RSS Feed" href="http://nameless.cis.udel.edu/class_wiki/index.php?title=Special:RecentChanges&feed=rss">
+		<link rel="alternate" type="application/atom+xml" title="Dynamic Vision Lab Atom Feed" href="http://nameless.cis.udel.edu/class_wiki/index.php?title=Special:RecentChanges&feed=atom">
+		<title>CISC220 F2014 Project1 - Dynamic Vision Lab</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/class_wiki/skins/common/shared.css?164";
+			@import "/class_wiki/skins/monobook/main.css?164";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="./CISC220 F2014 Project1_files/commonPrint.css">
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/class_wiki/skins/monobook/IE50Fixes.css?164";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/class_wiki/skins/monobook/IE55Fixes.css?164";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/class_wiki/skins/monobook/IE60Fixes.css?164";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/class_wiki/skins/monobook/IE70Fixes.css?164";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/class_wiki/skins/common/IEFixes.js?164"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		<script type="text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/class_wiki/skins";
+var wgArticlePath = "/class_wiki/index.php/$1";
+var wgScriptPath = "/class_wiki";
+var wgScript = "/class_wiki/index.php";
+var wgVariantArticlePath = false;
+var wgActionPaths = [];
+var wgServer = "http://nameless.cis.udel.edu";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "CISC220_F2014_Project1";
+var wgTitle = "CISC220 F2014 Project1";
+var wgAction = "view";
+var wgArticleId = "618";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "5513";
+var wgVersion = "1.13.0";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+/*]]>*/</script><style id="ublock-preload-1ae7a5f130fc79b4fdb8a4272d9426b5">[href^="http://www.amazon.co.uk/exec/obidos/external-search?"],
+#content > #right > .dose > .dosesingle,
+#content > #center > .dose > .dosesingle
+{display:none !important;}</style>
+                
+		<script type="text/javascript" src="./CISC220 F2014 Project1_files/wikibits.js"><!-- wikibits js --></script><style type="text/css">@import "/class_wiki/skins/monobook/KHTMLFixes.css";</style>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="./CISC220 F2014 Project1_files/ajax.js"></script>
+		<script type="text/javascript" src="./CISC220 F2014 Project1_files/index.php"><!-- site js --></script>
+	</head>
+<body class="mediawiki ns-0 ltr page-CISC220_F2014_Project1">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">CISC220 F2014 Project1</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Dynamic Vision Lab</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="http://nameless.cis.udel.edu/class_wiki/index.php/CISC220_F2014_Project1#column-one">navigation</a>, <a href="http://nameless.cis.udel.edu/class_wiki/index.php/CISC220_F2014_Project1#searchInput">search</a></div>			<!-- start content -->
+			<a name="1._Binary_Search_Tree_.28BST.29_implementation"></a><h3> <span class="mw-headline">1. Binary Search Tree (BST) implementation</span></h3>
+<p>Write two versions of a templatized binary search tree class <b>BSTree_Fast</b> and <b>BSTree_Slow</b> (details below).  For each version you should define the following <i>THREE</i> member functions: <i>insert()</i>, <i>contains()</i>, and <i>findMax()</i>.  Both classes will use the templatized class <b>BSTNode</b> to store an inserted element.  When an element (aka <i>key</i>) is inserted more than once, there should not be multiple BSTNodes created, but rather the <i>number</i> member variable of the original BSTNode should be incremented.
+</p><p>Starter code is provided <a href="http://nameless.cis.udel.edu/class_data/220_f2014/code/bst_fast_and_slow.tar" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/code/bst_fast_and_slow.tar" rel="nofollow">here</a>
+</p>
+<ul><li> <b>BSTree_Fast</b>
+<ul><li> Implement the BST using a traditional pointer-based linked structure as detailed in Chap. 6.2 of the textbook.  <b>BSTree_Fast</b> should also keep track of its maximum depth; make sure to update this with every <i>insert()</i>.
+</li><li> Write a member function <i>print()</i> which does the following:
+<ul><li> Prints to cout every key from smallest to largest, with the number of occurrences of each also printed, using a <i>recursive, in-order traversal of the BST</i>
+</li><li> Prints a count of how many unique words there are
+</li><li> Prints how many words total there are
+</li><li> Prints the maximum depth of the tree.
+</li></ul>
+</li></ul>
+</li><li> <b>BSTree_Slow</b>
+<ul><li> Implement the BST using an unordered <a href="http://www.cplusplus.com/reference/vector/vector/" class="external text" title="http://www.cplusplus.com/reference/vector/vector/" rel="nofollow"><b>STL vector</b></a> of pointers to BSTNodes (the <i>left</i> and <i>right</i> pointer variables of each node will be NULL and unused).  Do not attempt to keep things <i>organized</i>: <i>contains()</i> should be a simple loop through the vector, <i>insert()</i> should just be <i>push_back()</i> if this is the first occurrence of the key, and so on.  Note that this <b>NOT</b> the same as representing a binary tree's structure with an array as described in lecture and Chap. 6.2 of the textbook.  
+</li><li> Write a member function <i>print()</i> which does the same as above, except the words should just be printed in the order they are stored in the vector, and there is no depth to print.
+</li></ul>
+</li></ul>
+<a name="2._BST_testing_and_comparison"></a><h3> <span class="mw-headline">2. BST testing and comparison</span></h3>
+<p>Write a driver function which creates and fills a <b>separate</b> <b>BSTree_Fast</b> and <b>BSTree_Slow</b> of C++ <i>string</i>s <b>for each</b> of the following files by reading from them word-by-word and calling insert() repeatedly. Note that all of these files have been "cleaned" (punctuation removed, all lower-case).
+</p>
+<ul><li> <a href="http://nameless.cis.udel.edu/class_data/220_f2014/data/cleaned_doi.txt" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/data/cleaned_doi.txt" rel="nofollow">DOI</a> (about 1K total words)
+</li><li> <a href="http://nameless.cis.udel.edu/class_data/220_f2014/data/cleaned_bts.txt" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/data/cleaned_bts.txt" rel="nofollow">BTS</a> (~14K words)
+</li><li> <a href="http://nameless.cis.udel.edu/class_data/220_f2014/data/cleaned_greatexp.txt" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/data/cleaned_greatexp.txt" rel="nofollow">GE</a> (~185K words)    
+</li></ul>
+<p>In your README PDF, answer the following questions <i>for each file</i> using the information from print() or your own custom functions.  <i>Your BSTree_Fast and BSTree_Slow should give the same answers for the first three questions</i>
+</p>
+<ul><li> How many unique words are there? 
+</li><li> How many different words total are there?  
+</li><li> What is the alphabetically <i>last</i> word?
+</li><li> What is the maximum depth of the BSTree_Fast generated? 
+</li></ul>
+<p><i>How long</i> does it takes for <b>BSTree_Fast</b> vs. <b>BSTree_Slow</b> to carry out the following <i>FIVE</i> operations for each of the three input files?  (To get precise timing under Unix, use the <i>gettimeofday()</i> function.  There is a code snippet under the Unix, Linux and Mac section <a href="http://www.songho.ca/misc/timer/timer.html" class="external text" title="http://www.songho.ca/misc/timer/timer.html" rel="nofollow">here</a> that should help.)
+</p>
+<ul><li> Create the BST
+</li><li> Search for each of these words with contains():
+<ul><li> love
+</li><li> death
+</li><li> tyranny
+</li></ul>
+</li><li> Find the alphabetically <i>last</i> word with findMax()
+</li></ul>
+<a name="3._Submission"></a><h3> <span class="mw-headline">3. Submission</span></h3>
+<ul><li> Include a <b>PDF file</b> &lt;Your Name&gt;_README.pdf which contains:
+<ul><li> Answers to the questions above.  Do NOT include the full listing from your print() functions.  However, a call to print() for both versions of the BST should be in your driver code.
+</li><li> The timing measurements requested, in a nicely-formatted table, as well as comments on why you think the timings vary for the different (1) BST implementations, (2) operations being performed, and (3) files from which the BSTs were created.  
+</li></ul>
+</li><li> Rename your code directory &lt;Your Last Name&gt;_Project1 and create a single tar/zip/rar file out of it named &lt;Your Last Name&gt;_Project1.tar (or .zip or .rar, etc.). 
+</li><li> Submit it in Sakai by <i>midnight at the end of Thursday, October 2</i>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 4/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb-mw_:pcache:idhash:618-0!1!0!!en!2!edit=0 and timestamp 20150215215641 -->
+<div class="printfooter">
+Retrieved from "<a href="./CISC220 F2014 Project1_files/CISC220 F2014 Project1.html">http://nameless.cis.udel.edu/class_wiki/index.php/CISC220_F2014_Project1</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="./CISC220 F2014 Project1_files/CISC220 F2014 Project1.html" title="View the content page [alt-c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=Talk:CISC220_F2014_Project1&action=edit" title="Discussion about the content page [alt-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=CISC220_F2014_Project1&action=edit" title="This page is protected.
+You can view its source. [alt-e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=CISC220_F2014_Project1&action=history" title="Past versions of this page. [alt-h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=Special:UserLogin&returnto=CISC220_F2014_Project1" title="You are encouraged to log in, it is not mandatory however. [alt-o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(images/Icon2_igvc.png);" href="http://nameless.cis.udel.edu/class_wiki/index.php/Main_Page" title="Visit the Main Page [alt-z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage-description"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Main_Page">Main Page</a></li>
+				<li id="n-portal"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:RecentChanges" title="The list of recent changes in the wiki. [alt-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Help:Contents" title="The place to find out.">Help</a></li>
+				<li id="n-Skintest"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Skintest">Skintest</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://nameless.cis.udel.edu/class_wiki/index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search Dynamic Vision Lab [alt-f]" accesskey="f" value="">
+				<input type="submit" name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists">&nbsp;
+				<input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text">
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:WhatLinksHere/CISC220_F2014_Project1" title="List of all wiki pages that link here [alt-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:RecentChangesLinked/CISC220_F2014_Project1" title="Recent changes in pages linked from this page [alt-k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:Upload" title="Upload files [alt-u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:SpecialPages" title="List of all special pages [alt-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=CISC220_F2014_Project1&printable=yes" title="Printable version of this page [alt-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=CISC220_F2014_Project1&oldid=5513" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="./CISC220 F2014 Project1_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified on 22 September 2014, at 16:25.</li>
+				<li id="viewcount">This page has been accessed 935 times.</li>
+				<li id="privacy"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:Privacy_policy" title="Dynamic Vision Lab:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:About" title="Dynamic Vision Lab:About">About Dynamic Vision Lab</a></li>
+				<li id="disclaimer"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:General_disclaimer" title="Dynamic Vision Lab:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.206 secs. -->
+<style class="ublock-postload-1ae7a5f130fc79b4fdb8a4272d9426b5">#content > #center > .dose > .dosesingle,
+#content > #right > .dose > .dosesingle
+{display:none !important;}</style></body></html>

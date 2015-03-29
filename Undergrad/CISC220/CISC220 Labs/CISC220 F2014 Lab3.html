@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0068)http://nameless.cis.udel.edu/class_wiki/index.php/CISC220_F2014_Lab3 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="generator" content="MediaWiki 1.13.0">
+		<meta name="keywords" content="CISC220 F2014 Lab3">
+		<link rel="shortcut icon" href="http://nameless.cis.udel.edu/favicon.ico">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://nameless.cis.udel.edu/class_wiki/opensearch_desc.php" title="Dynamic Vision Lab (en)">
+		<link rel="alternate" type="application/rss+xml" title="Dynamic Vision Lab RSS Feed" href="http://nameless.cis.udel.edu/class_wiki/index.php?title=Special:RecentChanges&feed=rss">
+		<link rel="alternate" type="application/atom+xml" title="Dynamic Vision Lab Atom Feed" href="http://nameless.cis.udel.edu/class_wiki/index.php?title=Special:RecentChanges&feed=atom">
+		<title>CISC220 F2014 Lab3 - Dynamic Vision Lab</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/class_wiki/skins/common/shared.css?164";
+			@import "/class_wiki/skins/monobook/main.css?164";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="./CISC220 F2014 Lab3_files/commonPrint.css">
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/class_wiki/skins/monobook/IE50Fixes.css?164";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/class_wiki/skins/monobook/IE55Fixes.css?164";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/class_wiki/skins/monobook/IE60Fixes.css?164";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/class_wiki/skins/monobook/IE70Fixes.css?164";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/class_wiki/skins/common/IEFixes.js?164"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		<script type="text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/class_wiki/skins";
+var wgArticlePath = "/class_wiki/index.php/$1";
+var wgScriptPath = "/class_wiki";
+var wgScript = "/class_wiki/index.php";
+var wgVariantArticlePath = false;
+var wgActionPaths = [];
+var wgServer = "http://nameless.cis.udel.edu";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "CISC220_F2014_Lab3";
+var wgTitle = "CISC220 F2014 Lab3";
+var wgAction = "view";
+var wgArticleId = "616";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "5427";
+var wgVersion = "1.13.0";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+/*]]>*/</script><style id="ublock-preload-1ae7a5f130fc79b4fdb8a4272d9426b5">[href^="http://www.amazon.co.uk/exec/obidos/external-search?"],
+#content > #right > .dose > .dosesingle,
+#content > #center > .dose > .dosesingle
+{display:none !important;}</style>
+                
+		<script type="text/javascript" src="./CISC220 F2014 Lab3_files/wikibits.js"><!-- wikibits js --></script><style type="text/css">@import "/class_wiki/skins/monobook/KHTMLFixes.css";</style>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="./CISC220 F2014 Lab3_files/ajax.js"></script>
+		<script type="text/javascript" src="./CISC220 F2014 Lab3_files/index.php"><!-- site js --></script>
+	</head>
+<body class="mediawiki ns-0 ltr page-CISC220_F2014_Lab3">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">CISC220 F2014 Lab3</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Dynamic Vision Lab</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="http://nameless.cis.udel.edu/class_wiki/index.php/CISC220_F2014_Lab3#column-one">navigation</a>, <a href="http://nameless.cis.udel.edu/class_wiki/index.php/CISC220_F2014_Lab3#searchInput">search</a></div>			<!-- start content -->
+			<a name="Lab_.233"></a><h2> <span class="mw-headline">Lab #3</span></h2>
+<p>The <i>Drozdek</i> references below are to the textbook.  It shouldn't matter whether you have the 3rd or 4th edition.
+</p>
+<a name="1._C.2B.2B_programming_exercises"></a><h3> <span class="mw-headline">1. C++ programming exercises</span></h3>
+<ul><li> <b>(3 points)</b> Drozdek programming assignment 4.10.3 (4.9.3 in 3rd edition): Implement the stack-based delimiter matching algorithm from Drozdek Section 4.1.  As in the algorithm, you should read from a file and handle parentheses, square brackets, curly braces, and C++ comments (/* and */ pairs), and skip all other characters that may be mixed in.  Use the <a href="http://www.cplusplus.com/reference/stack/stack/" class="external text" title="http://www.cplusplus.com/reference/stack/stack/" rel="nofollow">STL stack</a> class.  You may do everything in main.cpp. 
+<ul><li> To use the STL stack, you must have "#include &lt;stack&gt;" in your main.cpp.  Also be aware that this class separates <a href="http://www.cplusplus.com/reference/stack/stack/pop" class="external text" title="http://www.cplusplus.com/reference/stack/stack/pop" rel="nofollow">pop()</a> and <a href="http://www.cplusplus.com/reference/stack/stack/top" class="external text" title="http://www.cplusplus.com/reference/stack/stack/top" rel="nofollow">top()</a> into separate functions, so you will need to use top() to "read" what is about to be popped.
+</li></ul>
+</li><li> <b>(2 points)</b> Modify <a href="http://nameless.cis.udel.edu/class_data/220_f2014/code/array_queue.tar" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/code/array_queue.tar" rel="nofollow">this array_queue class</a> to be <i>circular</i> as defined in Drozdek Chapter 4.2.  You may refer to the code in figure 4.9, but what you submit should be based on array_queue.  Also, please use variable names <i>back</i> for where things are enqueued and <i>front</i> for where they are dequeued as discussed in class.  Don't change main.cpp; you should be able to run it to verify that your modified class still works.  
+<ul><li> If you have problems with the lines in the #ifdef LINUX sections of main.cpp, just comment out #define LINUX at the top.  The only purpose of these lines is to put a delay after each queue element getting printed.
+</li></ul>
+</li></ul>
+<a name="2._Submission"></a><h3> <span class="mw-headline">2. Submission</span></h3>
+<ul><li> Include a <b>PDF file</b> &lt;Your Name&gt;_README.pdf which contains the inputs and outputs of your delimiter matching program and several test strings being printed out for your circular array queue program.
+<ul><li> Sample delimiter tests: <a href="http://nameless.cis.udel.edu/class_data/220_f2014/data/delimiter_short.txt" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/data/delimiter_short.txt" rel="nofollow">short</a>, <a href="http://nameless.cis.udel.edu/class_data/220_f2014/data/delimiter_short_with_error.txt" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/data/delimiter_short_with_error.txt" rel="nofollow">short with error</a>, <a href="http://nameless.cis.udel.edu/class_data/220_f2014/data/delimiter_long.cpp" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/data/delimiter_long.cpp" rel="nofollow">long</a>, <a href="http://nameless.cis.udel.edu/class_data/220_f2014/data/delimiter_long_with_error.cpp" class="external text" title="http://nameless.cis.udel.edu/class_data/220_f2014/data/delimiter_long_with_error.cpp" rel="nofollow">long with error</a>
+</li></ul>
+</li><li> Create a single tar/zip/rar file out of the top-level and all subdirectories.  This archive file should be named &lt;Your Last Name&gt;_Lab3.tar (or .zip or .rar, etc.). 
+</li><li> Submit it in Sakai by <i>midnight at the end of Thursday, September 18</i>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 4/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb-mw_:pcache:idhash:616-0!1!0!!en!2!edit=0 and timestamp 20150215215535 -->
+<div class="printfooter">
+Retrieved from "<a href="./CISC220 F2014 Lab3_files/CISC220 F2014 Lab3.html">http://nameless.cis.udel.edu/class_wiki/index.php/CISC220_F2014_Lab3</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="./CISC220 F2014 Lab3_files/CISC220 F2014 Lab3.html" title="View the content page [alt-c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=Talk:CISC220_F2014_Lab3&action=edit" title="Discussion about the content page [alt-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=CISC220_F2014_Lab3&action=edit" title="This page is protected.
+You can view its source. [alt-e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=CISC220_F2014_Lab3&action=history" title="Past versions of this page. [alt-h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=Special:UserLogin&returnto=CISC220_F2014_Lab3" title="You are encouraged to log in, it is not mandatory however. [alt-o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(images/Icon2_igvc.png);" href="http://nameless.cis.udel.edu/class_wiki/index.php/Main_Page" title="Visit the Main Page [alt-z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage-description"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Main_Page">Main Page</a></li>
+				<li id="n-portal"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:RecentChanges" title="The list of recent changes in the wiki. [alt-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-help"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Help:Contents" title="The place to find out.">Help</a></li>
+				<li id="n-Skintest"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Skintest">Skintest</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://nameless.cis.udel.edu/class_wiki/index.php/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search Dynamic Vision Lab [alt-f]" accesskey="f" value="">
+				<input type="submit" name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists">&nbsp;
+				<input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text">
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:WhatLinksHere/CISC220_F2014_Lab3" title="List of all wiki pages that link here [alt-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:RecentChangesLinked/CISC220_F2014_Lab3" title="Recent changes in pages linked from this page [alt-k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:Upload" title="Upload files [alt-u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Special:SpecialPages" title="List of all special pages [alt-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=CISC220_F2014_Lab3&printable=yes" title="Printable version of this page [alt-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://nameless.cis.udel.edu/class_wiki/index.php?title=CISC220_F2014_Lab3&oldid=5427" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="./CISC220 F2014 Lab3_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified on 14 September 2014, at 18:44.</li>
+				<li id="viewcount">This page has been accessed 692 times.</li>
+				<li id="privacy"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:Privacy_policy" title="Dynamic Vision Lab:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:About" title="Dynamic Vision Lab:About">About Dynamic Vision Lab</a></li>
+				<li id="disclaimer"><a href="http://nameless.cis.udel.edu/class_wiki/index.php/Dynamic_Vision_Lab:General_disclaimer" title="Dynamic Vision Lab:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.186 secs. -->
+<style class="ublock-postload-1ae7a5f130fc79b4fdb8a4272d9426b5">#content > #center > .dose > .dosesingle,
+#content > #right > .dose > .dosesingle
+{display:none !important;}</style></body></html>
