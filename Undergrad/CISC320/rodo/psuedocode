@@ -1,0 +1,17 @@
+Pseudocode for Robot Dolphin Rodeo
+
+1. Read graph G
+     (Use Skiena's read_graph)
+2. Determine strong components of G
+     (Use Skiena's  strong.c)
+3. Build strong component graph C 
+     (Vertices are strong components of G)
+4. Discover sinks 
+     (Out-degree is 0 in C)
+5. Discover sources  (how?)
+     (In-degree is 0 in C, How to know this?)
+6. Write list of vertices (rodos - the base candidates) in the single source component 
+     (and give empty list if there are multiple sources)
+7. Write list of vertices (rodos - the sponge candidates) in the single sink component 
+     (and give empty list if there are multiple sinks)
+
